@@ -1,17 +1,5 @@
 import 'package:flutter/material.dart';
 
-class HomeTitleBar extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return new Row(
-      children: <Widget>[
-        new CityIndexText(),
-        new SearchEditText()
-      ],
-    );
-  }
-}
 
 // 城市指示器
 class CityIndexText extends StatefulWidget {
@@ -43,6 +31,8 @@ class _CityIndexTextState extends State<CityIndexText> {
   }
 }
 
+// 中间的搜索框
+// TODO 目前先用文本框代替 
 class SearchEditText extends StatefulWidget {
   SearchEditText({Key key}) : super(key: key);
 
@@ -51,15 +41,9 @@ class SearchEditText extends StatefulWidget {
 }
 
 class _ExampleWidgetState extends State<SearchEditText> {
-  final TextEditingController _controller = new TextEditingController();
-
+  
   @override
   Widget build(BuildContext context) {
-    return new TextField(
-      controller: _controller,
-      decoration: new InputDecoration(
-        hintText: 'Type something',
-      ),
-    );
+    return new Text("search area");
   }
 }
